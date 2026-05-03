@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.platform</groupId>
+    <artifactId>multi-domain-platform</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+
+        <!-- 🔥 Parent -->
+        <module>build-parent</module>
+
+        <!-- 🌍 Infrastructure -->
+        <module>infrastructure/api-gateway</module>
+        <module>infrastructure/config-server</module>
+        <module>infrastructure/eureka-server</module>
+        <module>infrastructure/auth-service</module>
+        <module>infrastructure/notification-service</module>
+        <module>infrastructure/audit-service</module>
+
+     
+        <!-- 🔁 Shared -->
+        <module>shared-libraries/common-core</module>
+        <module>shared-libraries/common-security</module>
+        <module>shared-libraries/common-exception</module>
+        <module>shared-libraries/common-kafka</module>
+
+        <!-- 🏥 Hospital Domain -->
+        <module>domains/hospital-domain/patient-service</module>
+        <module>domains/hospital-domain/doctor-service</module>
+        <module>domains/hospital-domain/appointment-service</module>
+        <module>domains/hospital-domain/lab-service</module>
+        <module>domains/hospital-domain/pharmacy-service</module>
+        <module>domains/hospital-domain/billing-service</module>
+
+       <!-- 
+         🏨 Hotel Domain 
+        <module>domains/hotel-domain/hotel-service</module>
+        <module>domains/hotel-domain/room-service</module>
+        <module>domains/hotel-domain/booking-service</module>
+        <module>domains/hotel-domain/order-service</module>
+        <module>domains/hotel-domain/billing-service</module>
+        <module>domains/hotel-domain/payment-service</module>
+
+         🛒 Grocery Domain 
+        <module>domains/grocery-domain/product-service</module>
+        <module>domains/grocery-domain/inventory-service</module>
+        <module>domains/grocery-domain/order-service</module>
+        <module>domains/grocery-domain/billing-service</module>
+        <module>domains/grocery-domain/payment-service</module>-->
+
+    </modules>
+
+</project>

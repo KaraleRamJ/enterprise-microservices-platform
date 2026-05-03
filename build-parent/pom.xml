@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.platform</groupId>
+  <artifactId>build-parent</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <!-- ✅ Only ONE Boot -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.3.2</version>
+    <relativePath/>
+  </parent>
+  <properties>
+    <java.version>21</java.version>
+    <spring-cloud.version>2023.0.3</spring-cloud.version>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <!-- Spring Cloud -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- Internal libraries -->
+      <dependency>
+        <groupId>com.platform</groupId>
+        <artifactId>common-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.platform</groupId>
+        <artifactId>common-exception</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.platform</groupId>
+        <artifactId>common-kafka</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.platform</groupId>
+        <artifactId>common-security</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      
+	<!-- JWT -->
+	<dependency>
+	    <groupId>io.jsonwebtoken</groupId>
+	    <artifactId>jjwt-api</artifactId>
+	    <version>0.11.5</version>
+	</dependency>
+	<dependency>
+	    <groupId>io.jsonwebtoken</groupId>
+	    <artifactId>jjwt-impl</artifactId>
+	    <version>0.11.5</version>
+	</dependency>
+	<dependency>
+	    <groupId>io.jsonwebtoken</groupId>
+	    <artifactId>jjwt-jackson</artifactId>
+	    <version>0.11.5</version>
+	</dependency>
+	
+	<!-- Twilio -->
+	<dependency>
+	    <groupId>com.twilio.sdk</groupId>
+	    <artifactId>twilio</artifactId>
+	    <version>9.14.0</version>
+	</dependency>
+	
+	<!-- MapStruct -->
+	<dependency>
+	    <groupId>org.mapstruct</groupId>
+	    <artifactId>mapstruct</artifactId>
+	    <version>1.5.5.Final</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.mapstruct</groupId>
+	    <artifactId>mapstruct-processor</artifactId>
+	    <version>1.5.5.Final</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	<!-- BouncyCastle -->
+	<dependency>
+	    <groupId>org.bouncycastle</groupId>
+	    <artifactId>bcprov-jdk18on</artifactId>
+	    <version>1.78</version>
+	</dependency>
+	
+	<!-- iText PDF -->
+	<dependency>
+	    <groupId>com.itextpdf</groupId>
+	    <artifactId>itext7-core</artifactId>
+	    <version>8.0.2</version>
+	</dependency>
+
+    </dependencies>
+  </dependencyManagement>
+  
+</project>

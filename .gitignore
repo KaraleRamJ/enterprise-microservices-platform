@@ -1,0 +1,17 @@
+# Eclipse
+.metadata/
+.classpath
+.project
+.settings/
+
+# Build
+target/
+*.log
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (if any)
+node_modules/

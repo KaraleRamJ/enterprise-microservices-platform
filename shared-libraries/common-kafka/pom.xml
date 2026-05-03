@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 🔥 Parent -->
+    <parent>
+        <groupId>com.platform</groupId>
+        <artifactId>build-parent</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../../build-parent/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>common-kafka</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+
+        <!-- 📡 Kafka API (needed for serializers, configs) -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+
+        <!-- 📦 JSON -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <!-- 🧪 Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 🔁 Shared DTOs -->
+        <dependency>
+            <groupId>com.platform</groupId>
+            <artifactId>common-core</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>
